@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
+from  database import dbUtil
 import lxml
+
 
 
 def get_category():
