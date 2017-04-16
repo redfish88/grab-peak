@@ -30,9 +30,9 @@ def select_sql(sql):
         conn.close()
 
 if __name__ == '__main__':
-    create_table_sql = 'create table blog_user(id INTEGER PRIMARY KEY autoincrement,name VARCHAR (100),description TEXT)'
-    create_tag_sql = 'create table article_category('
-    insert_sql = 'insert into blog_user(name,description) values(\'阮一峰的博客\',\'测试\')'
-    selectsql = 'select * from blog_user'
+    create_table_sql = 'create table blog_category(id INTEGER PRIMARY KEY autoincrement,href VARCHAR (100), tag_name VARCHAR (100))'
+    ##create_tag_sql = 'create table article_category('
+    #insert_sql = 'insert into blog_user(name,description) values(\'阮一峰的博客\',\'测试\')'
+    #selectsql = 'select * from blog_user'
     #print execute_sql(insert_sql)
-    print select_sql(selectsql)
+    print select_sql(create_table_sql)

@@ -16,6 +16,7 @@ def get_category():
         # print tag.get_text()
         print tag.a
         print tag.a.get('href')
+        print tag.a.get_text()
 
 
 
