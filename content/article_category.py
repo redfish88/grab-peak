@@ -1,8 +1,11 @@
+#coding=utf8
 import requests
 from bs4 import BeautifulSoup
 from  database import dbUtil
 import lxml
+from model import DBSession as db
 
+session = db.DBSession()
 
 
 def get_category():
@@ -14,9 +17,10 @@ def get_category():
     # tag_list = soup.select('.module-list-item')
     for tag in soup.select('#beta-inner li'):
         # print tag.get_text()
-        print tag.a
-        print tag.a.get('href')
-        print tag.a.get_text()
+        category = db.BlogCategory(href=tag.a.get('href'),tag_name=tag.a.get_text())
+        session.add(category)
+    session.commit()
+    session.close()
 
 
 
