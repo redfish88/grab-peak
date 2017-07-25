@@ -9,8 +9,7 @@ CREATE TABLE `blog_category` (
 	PRIMARY KEY (`id`)
 )
 COLLATE='utf8_general_ci'
-ENGINE=InnoDB
-;
+ENGINE=InnoDB;
 
 
 CREATE TABLE `article` (
@@ -23,7 +22,6 @@ CREATE TABLE `article` (
 	PRIMARY KEY (`id`)
 )
 COLLATE='utf8_general_ci'
-ENGINE=InnoDB
-;
+ENGINE=InnoDB;
 
 
